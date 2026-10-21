@@ -1,0 +1,17 @@
+{
+  "demo": "D5-skill",
+  "claude": "2.1.286 (Claude Code)",
+  "model_requested": "claude-sonnet-5-5",
+  "wall_s": 9.883,
+  "exit": 0,
+  "turns": 5,
+  "tool_calls": [
+    "Skill",
+    "Bash",
+    "Bash"
+  ],
+  "is_error": false,
+  "result_text": "**Expenses, September 2026**\n\n| Category | Total (€) | Share |\n|---|---|---|\n| groceries | 131.25 | 62.6% |\n| eating out | 48.30 | 23.0% |\n| transport | 30.00 | 14.3% |\n\nTotal: €209.55",
+  "check_after": "PASS  expenses total: got 209.55, expected 209.55\nPASS  report groceries: got 131.25, expected 131.25\nPASS  budget remaining (budget 300): got 90.45, expected 90.45",
+  "prompt": "Make my monthly report for September 2026."
+}

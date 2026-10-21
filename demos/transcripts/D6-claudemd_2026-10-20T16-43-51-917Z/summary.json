@@ -1,0 +1,17 @@
+{
+  "demo": "D6-claudemd",
+  "claude": "2.1.286 (Claude Code)",
+  "model_requested": "claude-sonnet-5-5",
+  "wall_s": 8.293,
+  "exit": 0,
+  "turns": 4,
+  "tool_calls": [
+    "Read",
+    "Edit",
+    "Bash"
+  ],
+  "is_error": false,
+  "result_text": "I added the utilities expense (€60.00 on 2026-09-30) to `data.json`. `node check.js` passes all three checks.\n\nYou spent **€131.25 on groceries**: €42.10 + €37.85 + €51.30.",
+  "check_after": "PASS  expenses total: got 269.55, expected 269.55\nPASS  report groceries: got 131.25, expected 131.25\nPASS  budget remaining (budget 300): got 30.45, expected 30.45",
+  "prompt": "Add a utilities expense of 60 on 2026-09-30 to data.json, then tell me what I spent on groceries."
+}

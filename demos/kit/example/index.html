@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><title>Expenses</title>
+<h1>September expenses</h1><p>Total: <span id="total"></span></p>
+<script>
+fetch("data.json").then(r => r.json()).then(items => {
+  document.getElementById("total").textContent = items.reduce((s, i) => s + i.amount, 0);
+});
+</script>

@@ -1,0 +1,49 @@
+{
+  "rule": "the first take that shows the demo as planned is used; every take is kept",
+  "used": {
+    "D1 chat": {
+      "transcript": "D1-chat_2026-10-19T18-18-22-254Z"
+    },
+    "D2 agent and tools": {
+      "transcript": "D2-agent_2026-10-20T16-42-25-301Z"
+    },
+    "D3 the sheet": {
+      "transcript": [
+        "D3-context_2026-10-20T17-12-42-325Z",
+        "D3-after_2026-10-20T17-12-48-776Z"
+      ],
+      "spare_live": [
+        "L-D3-before_take1.mp4",
+        "L-D3-after_take1.mp4"
+      ],
+      "why": "the interactive session lists more built-in tools (30.1k before and after) than the headless run (15.6k / 15.7k); the reported numbers come from the headless transcripts"
+    },
+    "D4 MCP": {
+      "live": "L-D4_take1.mp4",
+      "transcript": "D4-mcp_2026-10-20T16-59-06-553Z"
+    },
+    "D5 skill": {
+      "live": "L-D5_take1.mp4",
+      "transcript": "D5-skill_2026-10-20T16-44-06-147Z"
+    },
+    "D6 CLAUDE.md": {
+      "transcript": "D6-claudemd_2026-10-20T16-43-51-917Z"
+    },
+    "D7 plan mode": {
+      "live": "L-D7_take4.mp4",
+      "transcript": "D7-plan_2026-10-20T17-08-19-082Z"
+    },
+    "D8 subagents": {
+      "live": "L-D8_take2.mp4",
+      "transcript": "D8-subagents_2026-10-19T18-19-06-651Z"
+    },
+    "D9 everything": {
+      "transcript": "D9-all_2026-10-20T17-13-06-401Z"
+    }
+  },
+  "not_used": {
+    "L-D8 take 1": "deleted: another window was in the recorded area",
+    "other transcripts in transcripts/": "earlier or later takes of the same demo",
+    "L-D7_take1.mp4, L-D7_take2.mp4, L-D7_take3.mp4": "auto mode was switched on before the prompt was sent, so it built without asking; take 4 stayed in plan mode and shows the plan and the question"
+  }
+}

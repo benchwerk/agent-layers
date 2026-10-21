@@ -1,0 +1,198 @@
+{
+  "source": "demos/transcripts (takes listed in demos/takes.json)",
+  "demos": {
+    "D1": {
+      "take": "D1-chat_2026-10-19T18-18-22-254Z",
+      "turns": 1,
+      "wall_s": 7.224,
+      "tool_calls": 0,
+      "tools": []
+    },
+    "D2": {
+      "take": "D2-agent_2026-10-20T16-42-25-301Z",
+      "turns": 8,
+      "wall_s": 33.488,
+      "tool_calls": 7,
+      "tools": [
+        "Bash",
+        "Bash",
+        "Bash",
+        "Edit",
+        "Edit",
+        "Edit",
+        "Bash"
+      ],
+      "edits": 3,
+      "check_runs": null
+    },
+    "D3": {
+      "take_before": "D3-context_2026-10-20T17-12-42-325Z",
+      "take_after": "D3-after_2026-10-20T17-12-48-776Z",
+      "before": {
+        "tokens_total": 15600,
+        "window": "1m",
+        "categories": {
+          "System prompt": 2400,
+          "System tools": 11100,
+          "System tools (deferred)": 13200,
+          "Skills": 2100,
+          "Messages": 10,
+          "Free space": 951400,
+          "Autocompact buffer": 33000
+        },
+        "items": {
+          "dataviz": 480,
+          "update-config": 240,
+          "keybindings-help": 80,
+          "code-review": 280,
+          "simplify": 60,
+          "fewer-permission-prompts": 60,
+          "loop": 120,
+          "schedule": 130,
+          "claude-api": 360,
+          "run": 120,
+          "plugin-authoring": 80,
+          "init": 20,
+          "security-review": 30
+        }
+      },
+      "after": {
+        "tokens_total": 15700,
+        "window": "1m",
+        "categories": {
+          "System prompt": 2400,
+          "System tools": 11100,
+          "MCP tools (deferred)": 365,
+          "System tools (deferred)": 13400,
+          "Memory files": 32,
+          "Skills": 2100,
+          "Messages": 10,
+          "Free space": 951300,
+          "Autocompact buffer": 33000
+        },
+        "items": {
+          "mcp__expenses__append_insight": 67,
+          "mcp__expenses__create_table": 63,
+          "mcp__expenses__describe_table": 68,
+          "mcp__expenses__list_tables": 37,
+          "mcp__expenses__read_query": 63,
+          "mcp__expenses__write_query": 67,
+          "Project": 32,
+          "monthly-report": 40,
+          "dataviz": 480,
+          "update-config": 240,
+          "keybindings-help": 80,
+          "code-review": 280,
+          "simplify": 60,
+          "fewer-permission-prompts": 60,
+          "loop": 120,
+          "schedule": 130,
+          "claude-api": 360,
+          "run": 120,
+          "plugin-authoring": 80,
+          "init": 20,
+          "security-review": 30
+        }
+      },
+      "added_mcp_tools": 365,
+      "added_claude_md": 32,
+      "added_skill_label": 40,
+      "added_total": 437,
+      "added_share_of_before_pct": 2.8
+    },
+    "D4": {
+      "take": "D4-mcp_2026-10-20T16-59-06-553Z",
+      "turns": 5,
+      "wall_s": 10.551,
+      "tool_calls": 4,
+      "tools": [
+        "ToolSearch",
+        "mcp__expenses__list_tables",
+        "mcp__expenses__describe_table",
+        "mcp__expenses__read_query"
+      ]
+    },
+    "D5": {
+      "take": "D5-skill_2026-10-20T16-44-06-147Z",
+      "turns": 5,
+      "wall_s": 9.883,
+      "tool_calls": 3,
+      "tools": [
+        "Skill",
+        "Bash",
+        "Bash"
+      ]
+    },
+    "D6": {
+      "take": "D6-claudemd_2026-10-20T16-43-51-917Z",
+      "turns": 4,
+      "wall_s": 8.293,
+      "tool_calls": 3,
+      "tools": [
+        "Read",
+        "Edit",
+        "Bash"
+      ]
+    },
+    "D7": {
+      "take": "D7-plan_2026-10-20T17-08-19-082Z",
+      "turns": 3,
+      "wall_s": 40.478,
+      "tool_calls": 5,
+      "tools": [
+        "Agent",
+        "Bash (helper)",
+        "Bash (helper)",
+        "Write",
+        "ToolSearch"
+      ],
+      "files_edited": 0
+    },
+    "D8": {
+      "take": "D8-subagents_2026-10-19T18-19-06-651Z",
+      "turns": 1,
+      "wall_s": 24.257,
+      "tool_calls": 13,
+      "tools": [
+        "Glob",
+        "Read",
+        "Read",
+        "Bash",
+        "Agent",
+        "Agent",
+        "Read (helper)",
+        "Read (helper)",
+        "Read (helper)",
+        "Agent",
+        "Read (helper)",
+        "Read (helper)",
+        "Read (helper)"
+      ],
+      "helpers_started": 3,
+      "tokens_main_only": 26699,
+      "tokens_whole_tree": 262130,
+      "whole_tree_vs_main": 9.8
+    },
+    "D9": {
+      "take": "D9-all_2026-10-20T17-13-06-401Z",
+      "turns": 15,
+      "wall_s": 20.493,
+      "tool_calls": 13,
+      "tools": [
+        "Glob",
+        "Skill",
+        "Read",
+        "Read",
+        "Read",
+        "Read",
+        "Read",
+        "Read",
+        "Write",
+        "Write",
+        "Write",
+        "Edit",
+        "Bash"
+      ]
+    }
+  }
+}

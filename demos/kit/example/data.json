@@ -1,0 +1,9 @@
+[
+  {"date": "2026-09-02", "category": "groceries", "amount": "42.10"},
+  {"date": "2026-09-05", "category": "transport", "amount": "15.00"},
+  {"date": "2026-09-11", "category": "groceries", "amount": "37.85"},
+  {"date": "2026-09-14", "category": "eating out", "amount": "28.40"},
+  {"date": "2026-09-20", "category": "transport", "amount": "15.00"},
+  {"date": "2026-09-26", "category": "groceries", "amount": "51.30"},
+  {"date": "2026-09-29", "category": "eating out", "amount": "19.90"}
+]

@@ -1,0 +1,20 @@
+# Allow-list: nothing is published unless it is named here: the recorded demos (transcripts, screen captures, the kit
+# that ran them), the versions and the script that computes the reported numbers.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/LICENSE
+!/LICENSE-DATA
+!/editorial_log.md
+!/demos/
+!/analysis/
+# a recording checklist, not evidence
+/demos/kit/RECORDING_PLAN.md
+# a publishing helper, not part of the evidence
+/analysis/make_publish.py
+# never, anywhere
+.env
+*.key
+*.pem
+__pycache__/

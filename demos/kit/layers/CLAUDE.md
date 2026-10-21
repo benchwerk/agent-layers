@@ -1,0 +1,2 @@
+- Amounts are in euros.
+- After every change, run `node check.js`.

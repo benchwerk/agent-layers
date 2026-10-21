@@ -1,0 +1,13 @@
+{
+  "demo": "check",
+  "claude": "2.1.286 (Claude Code)",
+  "model_requested": "claude-sonnet-5-5",
+  "wall_s": 3.765,
+  "exit": 0,
+  "turns": 1,
+  "tool_calls": [],
+  "is_error": false,
+  "result_text": "OK",
+  "check_after": "FAIL  expenses total: got 042.1015.0037.8528.4015.0051.3019.90, expected 209.55\nFAIL  report groceries: got 042.1037.8551.30, expected 131.25\nFAIL  budget remaining (budget 300): got NaN, expected 90.45",
+  "prompt": "Reply with the single word OK."
+}

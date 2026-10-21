@@ -1,0 +1,18 @@
+{
+  "demo": "D4-mcp",
+  "claude": "2.1.286 (Claude Code)",
+  "model_requested": "claude-sonnet-5-5",
+  "wall_s": 10.551,
+  "exit": 0,
+  "turns": 5,
+  "tool_calls": [
+    "ToolSearch",
+    "mcp__expenses__list_tables",
+    "mcp__expenses__describe_table",
+    "mcp__expenses__read_query"
+  ],
+  "is_error": false,
+  "result_text": "You spent the most on **groceries** in September 2026, at $131.25 across 3 transactions.\n\nThe other categories were:\n- Eating out: $48.30 (2 transactions)\n- Transport: $30.00 (2 transactions)",
+  "check_after": "PASS  expenses total: got 209.55, expected 209.55\nPASS  report groceries: got 131.25, expected 131.25\nPASS  budget remaining (budget 300): got 90.45, expected 90.45",
+  "prompt": "Which category did I spend the most on in September 2026? Use the expenses database."
+}
