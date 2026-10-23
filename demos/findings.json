@@ -110,7 +110,8 @@
         "mcp__expenses__list_tables",
         "mcp__expenses__describe_table",
         "mcp__expenses__read_query"
-      ]
+      ],
+      "groceries_reply": "$131.25"
     },
     "D5": {
       "take": "D5-skill_2026-10-20T16-44-06-147Z",
@@ -132,7 +133,8 @@
         "Read",
         "Edit",
         "Bash"
-      ]
+      ],
+      "groceries_reply": "€131.25"
     },
     "D7": {
       "take": "D7-plan_2026-10-20T17-08-19-082Z",

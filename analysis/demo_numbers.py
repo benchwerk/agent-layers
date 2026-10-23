@@ -94,6 +94,12 @@ def main():
             d["whole_tree_vs_main"] = round(d["tokens_whole_tree"] / d["tokens_main_only"], 1) if d["tokens_main_only"] else None
         if key == "D7":
             d["files_edited"] = sum(c["name"] in ("Edit",) for c in calls)
+        # the groceries total as the reply wrote it (for the Shorts: dollars guessed in D4, euros after CLAUDE.md in D6);
+        # in D6 the first € is the utility bill the agent was asked to add, so the match is the one before "on groceries"
+        pat = {"D4": r"(\$[\d.,]*\d)", "D6": r"(€[\d.,]*\d)\**\s+on groceries"}.get(key)
+        if pat:
+            m = re.search(pat, r.get("result", ""))
+            d["groceries_reply"] = m.group(1) if m else None
         f["demos"][key] = d
 
     (demos / "findings.json").write_text(json.dumps(f, indent=2, ensure_ascii=False), encoding="utf-8")

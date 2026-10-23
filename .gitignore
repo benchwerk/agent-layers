@@ -18,3 +18,5 @@
 *.key
 *.pem
 __pycache__/
+# a publishing helper for the Shorts, not part of the evidence
+/analysis/make_shorts_publish.py
