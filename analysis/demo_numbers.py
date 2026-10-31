@@ -30,7 +30,8 @@ def tool_calls(ev):
         if e.get("type") == "assistant":
             for c in e.get("message", {}).get("content", []):
                 if c.get("type") == "tool_use":
-                    calls.append({"name": c["name"], "sub": bool(e.get("parent_tool_use_id"))})
+                    calls.append({"name": c["name"], "sub": bool(e.get("parent_tool_use_id")),
+                                  "arg": str((c.get("input") or {}).get("file_path", ""))})
     return calls
 
 
@@ -83,7 +84,7 @@ def main():
 
     for key, name in (("D4", "D4 MCP"), ("D5", "D5 skill"), ("D6", "D6 CLAUDE.md"), ("D7", "D7 plan mode"),
                       ("D8", "D8 subagents"), ("D9", "D9 everything")):
-        _, r, calls, d = basic(key, takes[name]["transcript"])
+        ev, r, calls, d = basic(key, takes[name]["transcript"])
         if key == "D8":
             d["helpers_started"] = sum(c["name"] in ("Agent", "Task") and not c["sub"] for c in calls)
             d["tokens_main_only"] = sum((r.get("usage") or {}).get(k, 0) for k in
@@ -96,6 +97,14 @@ def main():
             d["files_edited"] = sum(c["name"] in ("Edit",) for c in calls)
         # the groceries total as the reply wrote it (for the Shorts: dollars guessed in D4, euros after CLAUDE.md in D6);
         # in D6 the first € is the utility bill the agent was asked to add, so the match is the one before "on groceries"
+        if key == "D4":                            # the table's columns, from describe_table (no currency column)
+            for e in ev:
+                for c in (e.get("message", {}).get("content", []) if e.get("type") == "user" else []):
+                    if isinstance(c, dict) and c.get("type") == "tool_result" and "'cid'" in str(c.get("content")):
+                        d["columns"] = re.findall(r"'name': '(\w+)'", str(c["content"]))
+        if key == "D8":                            # the files the helpers were given (their own reads, data.json aside)
+            d["files_checked"] = len({c["arg"].replace("\\", "/").rsplit("/", 1)[-1] for c in calls
+                                      if c["sub"] and c["name"] == "Read" and not c["arg"].endswith("data.json")})
         pat = {"D4": r"(\$[\d.,]*\d)", "D6": r"(€[\d.,]*\d)\**\s+on groceries"}.get(key)
         if pat:
             m = re.search(pat, r.get("result", ""))

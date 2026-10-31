@@ -111,6 +111,11 @@
         "mcp__expenses__describe_table",
         "mcp__expenses__read_query"
       ],
+      "columns": [
+        "date",
+        "category",
+        "amount"
+      ],
       "groceries_reply": "$131.25"
     },
     "D5": {
@@ -173,7 +178,8 @@
       "helpers_started": 3,
       "tokens_main_only": 26699,
       "tokens_whole_tree": 262130,
-      "whole_tree_vs_main": 9.8
+      "whole_tree_vs_main": 9.8,
+      "files_checked": 3
     },
     "D9": {
       "take": "D9-all_2026-10-20T17-13-06-401Z",
